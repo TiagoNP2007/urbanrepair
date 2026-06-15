@@ -89,6 +89,22 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* --- ANIMAÇÃO DO MENU MOBILE (SUAVIZADA) --- */
+        @keyframes mobileMenuSlideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        #mobile-menu:not(.hidden) {
+            /* Tempo aumentado para 0.55s para um deslize mais lento e elegante */
+            animation: mobileMenuSlideDown 0.55s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
@@ -793,7 +809,7 @@
                     <div class="bg-white border border-slate-200 rounded-2xl rounded-tl-none p-3 shadow-sm max-w-[85%] text-slate-700 leading-relaxed">
                         Olá! Sou o assistente de engenharia da **Urban Repair**. 🛠️
                         <br><br>
-                        Estou aqui para ajudar a diagnosticar fissuras ou infiltrações, explicar as nossas garantias e soluções técnicas como o **Capoto** ou ajudar-te com orçamentos. Qual é o problema do teu edifício hoje?
+                        Estou aqui para ajudar a diagnosticar fissuras ou infiltrações, explicar as nossas garantias e soluções técnicas como o **Capoto** ou ajudar-te com orçamentos. Qual é o problem do teu edifício hoje?
                     </div>
                 </div>
             </div>
