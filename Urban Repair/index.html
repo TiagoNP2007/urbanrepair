@@ -93,7 +93,6 @@
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
 
-    <!-- Setas de Navegação (Computador) -->
     <div id="left-nav" class="nav-trigger" onclick="navigate(-1)"><span>&lt;</span></div>
     <div id="right-nav" class="nav-trigger" onclick="navigate(1)"><span>&gt;</span></div>
 
@@ -113,7 +112,6 @@
                 <i class="fa-solid fa-bars"></i>
             </button>
 
-            <!-- Menu Desktop -->
             <div class="hidden lg:flex space-x-8 font-semibold">
                 <a href="#" data-view="inicio" onclick="router('inicio')" class="text-accent hover:text-accent transition">Início</a>
                 <a href="#" data-view="quem-somos" onclick="router('quem-somos')" class="text-slate-600 hover:text-accent transition">Quem Somos</a>
@@ -126,7 +124,6 @@
         </div>
     </nav>
 
-    <!-- Menu Mobile -->
     <div id="mobile-menu" class="hidden lg:hidden absolute top-20 left-0 w-full bg-white border-b border-slate-200 p-6 flex flex-col space-y-4 shadow-xl z-40">
         <a href="#" data-view="inicio" onclick="router('inicio')" class="font-semibold text-accent hover:text-accent">Início</a>
         <a href="#" data-view="quem-somos" onclick="router('quem-somos')" class="font-semibold text-slate-600 hover:text-accent">Quem Somos</a>
@@ -138,7 +135,6 @@
 
     <main id="app" class="flex-grow">
         
-        <!-- SECÇÃO INÍCIO -->
         <section id="inicio" class="view active min-h-screen">
             <div class="bg-primary text-white pt-24 pb-36 relative overflow-hidden">
                 <div class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-accent/10 rounded-full blur-[120px] pointer-events-none"></div>
@@ -185,7 +181,6 @@
                 </div>
             </div>
 
-            <!-- Método Urban Repair -->
             <div class="bg-slate-50 py-16">
                 <div class="max-w-7xl mx-auto px-6">
                     <div class="text-center max-w-3xl mx-auto mb-16 scroll-reveal">
@@ -216,13 +211,12 @@
                                 <i class="fa-solid fa-chart-line"></i>
                             </div>
                             <h3 class="text-xl font-bold text-primary mb-3">3. Garantia & Valorização</h3>
-                            <p class="text-slate-600 leading-relaxed text-sm">Entregamos obras com valor estético premium, aumentando o valor de mercado do imóvel e garantindo durabilidade técnica estendida.</p>
+                            <p class="text-slate-600 leading-relaxed text-sm">Entregamos obras com value estético premium, aumentando o valor de mercado do imóvel e garantindo durabilidade técnica estendida.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Eficiência Certificada -->
             <div class="bg-white py-16 border-t border-slate-100 scroll-reveal">
                 <div class="max-w-7xl mx-auto px-6">
                     <div class="grid lg:grid-cols-2 gap-16 items-center">
@@ -243,7 +237,7 @@
                                     <div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0 text-sm">✓</div>
                                     <div>
                                         <h4 class="font-bold text-primary">Execução Limpa e Organizada</h4>
-                                        <p class="text-slate-500 text-sm">Equipas próprias especializadas e cumprimento rigoroso dos prazos.</p>
+                                        <p class="text-slate-500 text-sm">Equipas próprias especializadas and cumprimento rigoroso dos prazos.</p>
                                     </div>
                                 </div>
                                 <div class="flex gap-4 items-start">
@@ -288,7 +282,6 @@
             </div>
         </section>
 
-        <!-- SECÇÃO QUEM SOMOS -->
         <section id="quem-somos" class="view py-24 bg-white">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="grid lg:grid-cols-2 gap-16 items-center">
@@ -341,7 +334,6 @@
             </div>
         </section>
 
-        <!-- SECÇÃO SERVIÇOS -->
         <section id="servicos" class="view py-24 bg-secondary">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-load">
@@ -351,7 +343,6 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 scroll-reveal">
-                    <!-- Card 1 -->
                     <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-lg transition duration-300">
                         <div>
                             <div class="flex items-center justify-between mb-6">
@@ -367,7 +358,6 @@
                         </div>
                     </div>
 
-                    <!-- Card 2 -->
                     <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-lg transition duration-300">
                         <div>
                             <div class="flex items-center justify-between mb-6">
@@ -383,7 +373,6 @@
                         </div>
                     </div>
 
-                    <!-- Card 3 -->
                     <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-lg transition duration-300">
                         <div>
                             <div class="flex items-center justify-between mb-6">
@@ -399,11 +388,10 @@
                         </div>
                     </div>
 
-                    <!-- Card 4 -->
                     <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-lg transition duration-300">
                         <div>
                             <div class="mb-6"><i class="fa-solid fa-spray-can-sparkles text-3xl text-accent"></i></div>
-                            <h3 class="text-xl font-bold mb-4 text-primary">Limpeza Técnico</h3>
+                            <h3 class="text-xl font-bold mb-4 text-primary">Limpeza Técnica</h3>
                             <p class="text-slate-600 mb-6 text-sm leading-relaxed">Remoção de fungos, algas e contaminação urbana através de hidrolavagem controlada com agentes biodegradáveis.</p>
                         </div>
                         <div class="space-y-3 pt-6 border-t border-slate-100">
@@ -412,7 +400,6 @@
                         </div>
                     </div>
 
-                    <!-- Card 5 -->
                     <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-lg transition duration-300">
                         <div>
                             <div class="mb-6"><i class="fa-solid fa-building-columns text-3xl text-accent"></i></div>
@@ -425,7 +412,6 @@
                         </div>
                     </div>
 
-                    <!-- Card 6 -->
                     <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-lg transition duration-300">
                         <div>
                             <div class="mb-6"><i class="fa-solid fa-magnifying-glass-chart text-3xl text-accent"></i></div>
@@ -439,7 +425,6 @@
                     </div>
                 </div>
 
-                <!-- Tabela comparativa -->
                 <div class="mt-20 bg-white rounded-3xl p-8 border border-slate-200 shadow-md scroll-reveal">
                     <h3 class="text-2xl font-bold text-primary mb-6">Comparativo Técnico de Sistemas</h3>
                     <div class="overflow-x-auto">
@@ -482,7 +467,6 @@
             </div>
         </section>
 
-        <!-- SECÇÕES DE PORTFÓLIO (GALERIAS) -->
         <section id="pintura-gallery" class="view py-24 bg-white">
             <div class="max-w-7xl mx-auto px-6">
                 <button onclick="router('servicos')" class="mb-8 text-accent font-bold hover:underline"><i class="fa-solid fa-arrow-left mr-2"></i> Voltar aos Serviços</button>
@@ -514,7 +498,6 @@
             </div>
         </section>
 
-        <!-- SECÇÃO RESULTADOS -->
         <section id="resultados" class="view py-24 bg-white">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-load">
@@ -537,7 +520,6 @@
                 </div>
                 <p class="mt-8 text-center text-slate-500 text-sm">Arraste o slider para comparar resultados de intervenção estrutural.</p>
 
-                <!-- Feedback Testemunhos -->
                 <div class="mt-24 border-t border-slate-200 pt-16 scroll-reveal">
                     <h3 class="text-2xl font-bold text-primary text-center mb-12">O Que Dizem os Nossos Clientes</h3>
                     <div class="grid md:grid-cols-2 gap-8">
@@ -573,12 +555,11 @@
             </div>
         </section>
 
-        <!-- SECÇÃO ORÇAMENTO -->
         <section id="orcamento" class="view py-24 bg-secondary">
             <div class="max-w-5xl mx-auto px-6">
                 <div class="text-center mb-12 reveal-on-load">
                     <span class="text-accent font-bold tracking-wider uppercase text-xs">AVALIAÇÃO DE PATOLOGIAS</span>
-                    <h2 class="text-4xl font-extrabold text-primary mb-4">Consulta Técnico de Obra</h2>
+                    <h2 class="text-4xl font-extrabold text-primary mb-4">Consulta Técnica de Obra</h2>
                     <p class="text-slate-600">Assinale os sintomas visíveis do seu edifício para obtermos um diagnóstico preliminar mais preciso.</p>
                 </div>
                 
@@ -671,7 +652,6 @@
             </div>
         </section>
 
-        <!-- SECÇÃO CONTACTO -->
         <section id="contacto" class="view py-24 bg-primary text-white">
             <div class="max-w-7xl mx-auto px-6">
                 <h2 class="text-4xl font-extrabold mb-12 text-center reveal-on-load">Fale Connosco</h2>
@@ -680,9 +660,12 @@
                     <div class="lg:col-span-5 bg-white text-slate-800 p-8 rounded-3xl shadow-xl flex flex-col justify-between h-full">
                         <div class="space-y-6">
                             <h3 class="text-2xl font-bold text-primary mb-6">Informações Gerais</h3>
-                            <p class="flex items-start"><i class="fa-solid fa-location-dot mr-4 text-accent text-xl mt-1"></i> Rua João XXIII Nº39 Casais de Mem Martins 2725-070 Mem Martins</p>
-                            <p class="flex items-center"><i class="fa-solid fa-phone mr-4 text-accent text-xl"></i> +351 968 757 393</p>
-                            <p class="flex items-center"><i class="fa-solid fa-envelope mr-4 text-accent text-xl"></i> urbanrepair.geral@gmail.com</p>
+                            <p class="flex items-start">
+                                <i class="fa-solid fa-location-dot mr-4 text-accent text-xl mt-1 flex-shrink-0"></i> 
+                                <span class="leading-relaxed">Rua João XXIII Nº39 Casais de Mem Martins <span class="whitespace-nowrap">2725-070 Mem Martins</span></span>
+                            </p>
+                            <p class="flex items-center"><i class="fa-solid fa-phone mr-4 text-accent text-xl flex-shrink-0"></i> +351 968 757 393</p>
+                            <p class="flex items-center"><i class="fa-solid fa-envelope mr-4 text-accent text-xl flex-shrink-0"></i> urbanrepair.geral@gmail.com</p>
                         </div>
                         
                         <div class="mt-8 p-4 bg-slate-50 rounded-2xl border border-slate-200 text-xs">
@@ -749,14 +732,13 @@
         </section>
     </main>
 
-    <!-- Modals & Footer -->
     <div id="feedbackModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-6">
         <div class="bg-white rounded-3xl p-8 max-w-md w-full text-center shadow-2xl border border-slate-100 transform scale-95 transition-all duration-300">
             <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-6">
                 <i class="fa-solid fa-circle-check"></i>
             </div>
             <h3 class="text-2xl font-bold text-slate-900 mb-2">Mensagem Recebida!</h3>
-            <p id="modalMessage" class="text-slate-600 text-sm leading-relaxed mb-6">Os seus dados de diagnóstico foram guardados. A nossa equipa de engenharia irá entrar em contacto nas próximas 24 horas.</p>
+            <p id="modalMessage" class="text-slate-600 text-sm leading-relaxed mb-6">Os seus dados de diagnóstico foram guardados. A nossa equipa de engenharia irá entrar em contacto nas próximas 24 hours.</p>
             <button onclick="closeModal()" class="w-full bg-primary text-white py-3.5 rounded-xl font-bold hover:bg-slate-800 transition">Entendido</button>
         </div>
     </div>
@@ -768,7 +750,7 @@
                     Copyright &copy; 2026 <span class="text-[#ea580c]">Urban Repair</span>. All rights reserved.
                 </p>
                 <p class="text-slate-500 text-[14px] mt-1">
-                    Powered by <a href="https://orangecontainer.pt" target="_blank" class="hover:underline">orangecontainer.pt</a>
+                    Powered by <a href="#" id="powered-by-email" class="hover:underline text-accent">tiagogabrielnp@gmail.com</a>
                 </p>
             </div>
             <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="mt-4 md:mt-0 md:absolute md:right-6 text-[#f3a473] hover:text-[#ea580c] transition text-4xl leading-none" aria-label="Voltar ao topo">
@@ -777,26 +759,19 @@
         </div>
     </footer>
 
-    <!-- ================================================================= -->
-    <!--          BLOCO INTEGRADO: COMPONENTE DE CHATBOT DE IA             -->
-    <!-- ================================================================= -->
     <div id="ai-chat-container" class="fixed bottom-6 right-6 z-50">
         
-        <!-- Botão Redondo Flutuante -->
         <button onclick="toggleAIChat()" class="bg-[#ea580c] text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-2xl hover:bg-orange-700 transition-all duration-300 transform hover:scale-110 focus:outline-none relative">
             <i id="chat-icon-open" class="fa-solid fa-comments"></i>
             <i id="chat-icon-close" class="fa-solid fa-xmark hidden"></i>
-            <!-- Indicador de atividade técnica (Pulsar) -->
             <span class="absolute -top-0.5 -right-0.5 flex h-3 w-3">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
                 <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
             </span>
         </button>
 
-        <!-- Janela de Conversação Avançada -->
         <div id="ai-chat-window" class="hidden fixed bottom-24 right-6 w-[350px] md:w-[390px] h-[490px] bg-white rounded-2xl shadow-2xl border border-slate-200/80 flex flex-col overflow-hidden transition-all duration-300">
             
-            <!-- Topo do Chat -->
             <div class="bg-slate-900 p-4 text-white flex items-center justify-between">
                 <div class="flex items-center space-x-3">
                     <img src="logo.png" alt="Urban Repair Logo" class="w-8 h-8 object-contain bg-transparent rounded-lg">
@@ -812,20 +787,17 @@
                 </button>
             </div>
 
-            <!-- Contentor de Histórico Técnico -->
             <div id="chat-messages" class="flex-grow p-4 overflow-y-auto space-y-4 bg-slate-50 text-sm">
-                <!-- Boas-vindas Padrão -->
                 <div class="flex items-start gap-2.5">
                     <img src="logo.png" alt="Urban Repair Logo" class="w-7 h-7 object-contain bg-transparent rounded-md flex-shrink-0">
                     <div class="bg-white border border-slate-200 rounded-2xl rounded-tl-none p-3 shadow-sm max-w-[85%] text-slate-700 leading-relaxed">
                         Olá! Sou o assistente de engenharia da **Urban Repair**. 🛠️
                         <br><br>
-                        Estou aqui para ajudar a diagnosticar fissuras ou infiltrações, explicar as nossas garantias e soluções técnicos como o **Capoto** ou ajudar-te com orçamentos. Qual é o problema do teu edifício hoje?
+                        Estou aqui para ajudar a diagnosticar fissuras ou infiltrações, explicar as nossas garantias e soluções técnicas como o **Capoto** ou ajudar-te com orçamentos. Qual é o problema do teu edifício hoje?
                     </div>
                 </div>
             </div>
 
-            <!-- Formulário de Envio -->
             <form id="chat-form" onsubmit="sendChatMessage(event)" class="p-3 bg-white border-t border-slate-200 flex items-center gap-2">
                 <input id="chat-input" type="text" placeholder="Escreve o sintoma ou dúvida aqui..." required class="flex-grow p-2.5 bg-slate-100 border border-transparent rounded-xl text-xs focus:bg-white focus:border-[#ea580c] focus:ring-0 outline-none transition text-slate-800">
                 <button type="submit" class="bg-[#ea580c] text-white w-9 h-9 rounded-xl flex items-center justify-center hover:bg-orange-700 transition flex-shrink-0 text-xs">
@@ -993,7 +965,7 @@
             if (sintomas.length > 0) {
                 msg += ` Iremos analisar as patologias assinaladas (${sintomas.join(', ')}) antes da nossa visita técnica gratuita.`;
             } else {
-                msg += ` A nossa equipa irá entrar em contacto nas próximas 24 hours para agendar a vistoria técnica gratuita.`;
+                msg += ` A nossa equipa irá entrar em contacto nas próximas 24 horas para agendar a vistoria técnica gratuita.`;
             }
             
             document.getElementById('modalMessage').innerText = msg;
@@ -1012,21 +984,39 @@
 
         function configurarEmail() {
             const btn = document.getElementById('email-btn');
-            if(!btn) return;
-            const email = "urbanrepair.geral@gmail.com";
-            const assunto = "Pedido de Orçamento - Urban Repair";
-            const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+            if(btn) {
+                const email = "urbanrepair.geral@gmail.com";
+                const assunto = "Pedido de Orçamento - Urban Repair";
+                const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-            if (isMobile) {
-                btn.href = `mailto:${email}?subject=${encodeURIComponent(assunto)}`;
-            } else {
-                btn.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(assunto)}`;
-                btn.target = "_blank";
+                if (isMobile) {
+                    btn.href = `mailto:${email}?subject=${encodeURIComponent(assunto)}`;
+                } else {
+                    btn.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(assunto)}`;
+                    btn.target = "_blank";
+                }
+            }
+
+            // Configuração do email do programador (Powered by tiagogabrielnp@gmail.com)
+            const devBtn = document.getElementById('powered-by-email');
+            if(devBtn) {
+                const emailDev = "tiagogabrielnp@gmail.com";
+                const assuntoDev = "Contacto Profissional - Desenvolvimento Web";
+                const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+                if (isMobile) {
+                    // Deep link mailto para abrir a aplicação nativa de email do telemóvel (ex: App Gmail)
+                    devBtn.href = `mailto:${emailDev}?subject=${encodeURIComponent(assuntoDev)}`;
+                } else {
+                    // Link direto para abrir um novo separador web composto diretamente no Gmail do PC
+                    devBtn.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${emailDev}&su=${encodeURIComponent(assuntoDev)}`;
+                    devBtn.target = "_blank";
+                }
             }
         }
 
         // --- SISTEMA INTERATIVO DO CHATBOT DE IA ---
-        function toggleAIChat() {
+        async function toggleAIChat() {
             const chatWindow = document.getElementById('ai-chat-window');
             const iconOpen = document.getElementById('chat-icon-open');
             const iconClose = document.getElementById('chat-icon-close');
