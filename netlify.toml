@@ -1,7 +1,3 @@
 [build]
-  base = "."
+  base = "Urban Repair"
   functions = "netlify/functions"
-
-# Se o teu site precisar de um comando de build (ex: npm run build), adiciona aqui:
-# command = "npm run build"
-# publish = "dist"
