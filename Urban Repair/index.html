@@ -29,6 +29,7 @@
         .view.active { display: block !important; }
         .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); }
         
+        /* Estilos das Setas Laterais - Escondidas em telemóveis por padrão */
         .nav-trigger {
             position: fixed;
             top: 50%;
@@ -39,8 +40,9 @@
             transition: background 0.3s, opacity 0.3s;
             background: rgba(0,0,0,0.05);
             border-radius: 8px;
-            display: none; 
+            display: none; /* Escondido em mobile */
         }
+        /* Só mostra as setas em ecrãs de Computador (Mínimo de 1024px) */
         @media (min-width: 1024px) {
             .nav-trigger { display: block; }
         }
@@ -66,6 +68,7 @@
         .faq-item.active .faq-answer { max-height: 200px; }
         .faq-item.active .faq-icon { transform: rotate(180deg); }
 
+        /* --- SISTEMA DE ANIMAÇÕES ULTRA-FLUIDAS --- */
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(25px); }
             to { opacity: 1; transform: translateY(0); }
@@ -90,6 +93,7 @@
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
 
+    <!-- Setas de Navegação (Computador) -->
     <div id="left-nav" class="nav-trigger" onclick="navigate(-1)"><span>&lt;</span></div>
     <div id="right-nav" class="nav-trigger" onclick="navigate(1)"><span>&gt;</span></div>
 
@@ -109,6 +113,7 @@
                 <i class="fa-solid fa-bars"></i>
             </button>
 
+            <!-- Menu Desktop -->
             <div class="hidden lg:flex space-x-8 font-semibold">
                 <a href="#" data-view="inicio" onclick="router('inicio')" class="text-accent hover:text-accent transition">Início</a>
                 <a href="#" data-view="quem-somos" onclick="router('quem-somos')" class="text-slate-600 hover:text-accent transition">Quem Somos</a>
@@ -121,6 +126,7 @@
         </div>
     </nav>
 
+    <!-- Menu Mobile -->
     <div id="mobile-menu" class="hidden lg:hidden absolute top-20 left-0 w-full bg-white border-b border-slate-200 p-6 flex flex-col space-y-4 shadow-xl z-40">
         <a href="#" data-view="inicio" onclick="router('inicio')" class="font-semibold text-accent hover:text-accent">Início</a>
         <a href="#" data-view="quem-somos" onclick="router('quem-somos')" class="font-semibold text-slate-600 hover:text-accent">Quem Somos</a>
@@ -132,6 +138,7 @@
 
     <main id="app" class="flex-grow">
         
+        <!-- SECÇÃO INÍCIO -->
         <section id="inicio" class="view active min-h-screen">
             <div class="bg-primary text-white pt-24 pb-36 relative overflow-hidden">
                 <div class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-accent/10 rounded-full blur-[120px] pointer-events-none"></div>
@@ -178,6 +185,7 @@
                 </div>
             </div>
 
+            <!-- Método Urban Repair -->
             <div class="bg-slate-50 py-16">
                 <div class="max-w-7xl mx-auto px-6">
                     <div class="text-center max-w-3xl mx-auto mb-16 scroll-reveal">
@@ -214,6 +222,7 @@
                 </div>
             </div>
 
+            <!-- Eficiência Certificada -->
             <div class="bg-white py-16 border-t border-slate-100 scroll-reveal">
                 <div class="max-w-7xl mx-auto px-6">
                     <div class="grid lg:grid-cols-2 gap-16 items-center">
@@ -279,6 +288,7 @@
             </div>
         </section>
 
+        <!-- SECÇÃO QUEM SOMOS -->
         <section id="quem-somos" class="view py-24 bg-white">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="grid lg:grid-cols-2 gap-16 items-center">
@@ -331,6 +341,7 @@
             </div>
         </section>
 
+        <!-- SECÇÃO SERVIÇOS -->
         <section id="servicos" class="view py-24 bg-secondary">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-load">
@@ -340,6 +351,7 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 scroll-reveal">
+                    <!-- Card 1 -->
                     <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-lg transition duration-300">
                         <div>
                             <div class="flex items-center justify-between mb-6">
@@ -355,6 +367,7 @@
                         </div>
                     </div>
 
+                    <!-- Card 2 -->
                     <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-lg transition duration-300">
                         <div>
                             <div class="flex items-center justify-between mb-6">
@@ -370,6 +383,7 @@
                         </div>
                     </div>
 
+                    <!-- Card 3 -->
                     <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-lg transition duration-300">
                         <div>
                             <div class="flex items-center justify-between mb-6">
@@ -385,6 +399,7 @@
                         </div>
                     </div>
 
+                    <!-- Card 4 -->
                     <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-lg transition duration-300">
                         <div>
                             <div class="mb-6"><i class="fa-solid fa-spray-can-sparkles text-3xl text-accent"></i></div>
@@ -397,6 +412,7 @@
                         </div>
                     </div>
 
+                    <!-- Card 5 -->
                     <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-lg transition duration-300">
                         <div>
                             <div class="mb-6"><i class="fa-solid fa-building-columns text-3xl text-accent"></i></div>
@@ -409,6 +425,7 @@
                         </div>
                     </div>
 
+                    <!-- Card 6 -->
                     <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-lg transition duration-300">
                         <div>
                             <div class="mb-6"><i class="fa-solid fa-magnifying-glass-chart text-3xl text-accent"></i></div>
@@ -422,20 +439,21 @@
                     </div>
                 </div>
 
+                <!-- Tabela comparativa -->
                 <div class="mt-20 bg-white rounded-3xl p-8 border border-slate-200 shadow-md scroll-reveal">
                     <h3 class="text-2xl font-bold text-primary mb-6">Comparativo Técnico de Sistemas</h3>
                     <div class="overflow-x-auto">
                         <table class="w-full text-left border-collapse">
                             <thead>
                                 <tr class="border-b border-slate-200">
-                                    <th class="py-4 text-slate-500 font-bold text-xs sm:text-sm">Sistema</th>
-                                    <th class="py-4 text-slate-500 font-bold text-xs sm:text-sm">Resistência UV</th>
-                                    <th class="py-4 text-slate-500 font-bold text-xs sm:text-sm">Isolamento Térmico</th>
-                                    <th class="py-4 text-slate-500 font-bold text-xs sm:text-sm">Flexibilidade Física</th>
-                                    <th class="py-4 text-slate-500 font-bold text-xs sm:text-sm">Durabilidade Estimada</th>
+                                    <th class="py-4 text-slate-500 font-bold text-sm">Sistema</th>
+                                    <th class="py-4 text-slate-500 font-bold text-sm">Resistência UV</th>
+                                    <th class="py-4 text-slate-500 font-bold text-sm">Isolamento Térmico</th>
+                                    <th class="py-4 text-slate-500 font-bold text-sm">Flexibilidade Física</th>
+                                    <th class="py-4 text-slate-500 font-bold text-sm">Durabilidade Estimada</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y divide-slate-100 text-[10px] sm:text-sm">
+                            <tbody class="divide-y divide-slate-100 text-sm">
                                 <tr>
                                     <td class="py-4 font-bold text-primary">Pintura Elastomérica Premium</td>
                                     <td class="py-4 text-slate-600">Elevada</td>
@@ -464,6 +482,7 @@
             </div>
         </section>
 
+        <!-- SECÇÕES DE PORTFÓLIO (GALERIAS) -->
         <section id="pintura-gallery" class="view py-24 bg-white">
             <div class="max-w-7xl mx-auto px-6">
                 <button onclick="router('servicos')" class="mb-8 text-accent font-bold hover:underline"><i class="fa-solid fa-arrow-left mr-2"></i> Voltar aos Serviços</button>
@@ -495,6 +514,7 @@
             </div>
         </section>
 
+        <!-- SECÇÃO RESULTADOS -->
         <section id="resultados" class="view py-24 bg-white">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-load">
@@ -517,6 +537,7 @@
                 </div>
                 <p class="mt-8 text-center text-slate-500 text-sm">Arraste o slider para comparar resultados de intervenção estrutural.</p>
 
+                <!-- Feedback Testemunhos -->
                 <div class="mt-24 border-t border-slate-200 pt-16 scroll-reveal">
                     <h3 class="text-2xl font-bold text-primary text-center mb-12">O Que Dizem os Nossos Clientes</h3>
                     <div class="grid md:grid-cols-2 gap-8">
@@ -552,6 +573,7 @@
             </div>
         </section>
 
+        <!-- SECÇÃO ORÇAMENTO -->
         <section id="orcamento" class="view py-24 bg-secondary">
             <div class="max-w-5xl mx-auto px-6">
                 <div class="text-center mb-12 reveal-on-load">
@@ -649,6 +671,7 @@
             </div>
         </section>
 
+        <!-- SECÇÃO CONTACTO -->
         <section id="contacto" class="view py-24 bg-primary text-white">
             <div class="max-w-7xl mx-auto px-6">
                 <h2 class="text-4xl font-extrabold mb-12 text-center reveal-on-load">Fale Connosco</h2>
@@ -657,7 +680,7 @@
                     <div class="lg:col-span-5 bg-white text-slate-800 p-8 rounded-3xl shadow-xl flex flex-col justify-between h-full">
                         <div class="space-y-6">
                             <h3 class="text-2xl font-bold text-primary mb-6">Informações Gerais</h3>
-                            <p class="flex items-start"><i class="fa-solid fa-location-dot mr-4 text-accent text-xl mt-1"></i> Rua João XXIII Nº39 Casais de Mem Martins<br>2725-070 Mem Martins</p>
+                            <p class="flex items-start"><i class="fa-solid fa-location-dot mr-4 text-accent text-xl mt-1"></i> Rua João XXIII Nº39 Casais de Mem Martins 2725-070 Mem Martins</p>
                             <p class="flex items-center"><i class="fa-solid fa-phone mr-4 text-accent text-xl"></i> +351 968 757 393</p>
                             <p class="flex items-center"><i class="fa-solid fa-envelope mr-4 text-accent text-xl"></i> urbanrepair.geral@gmail.com</p>
                         </div>
@@ -726,6 +749,7 @@
         </section>
     </main>
 
+    <!-- Modals & Footer -->
     <div id="feedbackModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-6">
         <div class="bg-white rounded-3xl p-8 max-w-md w-full text-center shadow-2xl border border-slate-100 transform scale-95 transition-all duration-300">
             <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-6">
@@ -744,7 +768,7 @@
                     Copyright &copy; 2026 <span class="text-[#ea580c]">Urban Repair</span>. All rights reserved.
                 </p>
                 <p class="text-slate-500 text-[14px] mt-1">
-                    Powered by <a href="mailto:tiagogabrielnp@gmail.com" class="hover:underline">tiagogabrielnp@gmail.com</a>
+                    Powered by <a href="https://orangecontainer.pt" target="_blank" class="hover:underline">orangecontainer.pt</a>
                 </p>
             </div>
             <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="mt-4 md:mt-0 md:absolute md:right-6 text-[#f3a473] hover:text-[#ea580c] transition text-4xl leading-none" aria-label="Voltar ao topo">
@@ -753,21 +777,29 @@
         </div>
     </footer>
 
+    <!-- ================================================================= -->
+    <!--          BLOCO INTEGRADO: COMPONENTE DE CHATBOT DE IA             -->
+    <!-- ================================================================= -->
     <div id="ai-chat-container" class="fixed bottom-6 right-6 z-50">
+        
+        <!-- Botão Redondo Flutuante -->
         <button onclick="toggleAIChat()" class="bg-[#ea580c] text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-2xl hover:bg-orange-700 transition-all duration-300 transform hover:scale-110 focus:outline-none relative">
             <i id="chat-icon-open" class="fa-solid fa-comments"></i>
             <i id="chat-icon-close" class="fa-solid fa-xmark hidden"></i>
+            <!-- Indicador de atividade técnica (Pulsar) -->
             <span class="absolute -top-0.5 -right-0.5 flex h-3 w-3">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
                 <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
             </span>
         </button>
 
+        <!-- Janela de Conversação Avançada -->
         <div id="ai-chat-window" class="hidden fixed bottom-24 right-6 w-[350px] md:w-[390px] h-[490px] bg-white rounded-2xl shadow-2xl border border-slate-200/80 flex flex-col overflow-hidden transition-all duration-300">
             
+            <!-- Topo do Chat -->
             <div class="bg-slate-900 p-4 text-white flex items-center justify-between">
                 <div class="flex items-center space-x-3">
-                    <img src="logo.png" alt="Logo" class="w-8 h-8 object-contain">
+                    <img src="logo.png" alt="Urban Repair Logo" class="w-8 h-8 object-contain bg-white rounded-lg">
                     <div>
                         <h4 class="font-bold text-xs tracking-wide uppercase" style="font-family: 'Poppins', sans-serif;">Engenheiro Virtual</h4>
                         <span class="text-[10px] text-emerald-400 flex items-center gap-1 font-semibold">
@@ -780,9 +812,11 @@
                 </button>
             </div>
 
+            <!-- Contentor de Histórico Técnico -->
             <div id="chat-messages" class="flex-grow p-4 overflow-y-auto space-y-4 bg-slate-50 text-sm">
+                <!-- Boas-vindas Padrão -->
                 <div class="flex items-start gap-2.5">
-                    <div class="w-7 h-7 bg-slate-900 text-white rounded-md flex items-center justify-center text-[10px] font-bold flex-shrink-0">UR</div>
+                    <img src="logo.png" alt="Urban Repair Logo" class="w-7 h-7 object-contain bg-white rounded-md flex-shrink-0">
                     <div class="bg-white border border-slate-200 rounded-2xl rounded-tl-none p-3 shadow-sm max-w-[85%] text-slate-700 leading-relaxed">
                         Olá! Sou o assistente de engenharia da **Urban Repair**. 🛠️
                         <br><br>
@@ -791,6 +825,7 @@
                 </div>
             </div>
 
+            <!-- Formulário de Envio -->
             <form id="chat-form" onsubmit="sendChatMessage(event)" class="p-3 bg-white border-t border-slate-200 flex items-center gap-2">
                 <input id="chat-input" type="text" placeholder="Escreve o sintoma ou dúvida aqui..." required class="flex-grow p-2.5 bg-slate-100 border border-transparent rounded-xl text-xs focus:bg-white focus:border-[#ea580c] focus:ring-0 outline-none transition text-slate-800">
                 <button type="submit" class="bg-[#ea580c] text-white w-9 h-9 rounded-xl flex items-center justify-center hover:bg-orange-700 transition flex-shrink-0 text-xs">
@@ -816,6 +851,7 @@
             menu.classList.toggle('hidden');
         }
 
+        // CONTROLADOR DE ANIMAÇÃO POR SCROLL
         function initScrollAnimations() {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -838,11 +874,13 @@
             const target = document.getElementById(viewId);
             if(target) target.classList.add('active');
             
+            // --- FECHA O MENU MOBILE DE FORMA SEGURA E SEM CONFLITOS ---
             const mobileMenu = document.getElementById('mobile-menu');
             if(mobileMenu) {
                 mobileMenu.classList.add('hidden');
             }
             
+            // --- ATUALIZAÇÃO SÍNCRONA DO MENU ATIVO ---
             document.querySelectorAll('[data-view]').forEach(link => {
                 if (link.getAttribute('data-view') === viewId) {
                     link.classList.remove('text-slate-600');
@@ -861,6 +899,7 @@
             setTimeout(initScrollAnimations, 60);
         }
 
+        // --- SISTEMA DE SWIPE PARA TELEMÓVEIS ---
         let touchstartX = 0;
         let touchstartY = 0;
         let touchendX = 0;
@@ -986,6 +1025,7 @@
             }
         }
 
+        // --- SISTEMA INTERATIVO DO CHATBOT DE IA ---
         function toggleAIChat() {
             const chatWindow = document.getElementById('ai-chat-window');
             const iconOpen = document.getElementById('chat-icon-open');
@@ -1011,6 +1051,7 @@
 
             inputEl.value = '';
 
+            // Adicionar bolha de texto do utilizador no ecrã
             const userBubble = document.createElement('div');
             userBubble.className = "flex items-start gap-2.5 justify-end";
             userBubble.innerHTML = `
@@ -1021,10 +1062,11 @@
             messagesContainer.appendChild(userBubble);
             messagesContainer.scrollTop = messagesContainer.scrollHeight;
 
+            // Inserir indicador de carregamento
             const typingBubble = document.createElement('div');
             typingBubble.className = "flex items-start gap-2.5 id-typing-bubble";
             typingBubble.innerHTML = `
-                <div class="w-7 h-7 bg-slate-900 text-white rounded-md flex items-center justify-center text-[10px] font-bold flex-shrink-0">UR</div>
+                <img src="logo.png" alt="Urban Repair Logo" class="w-7 h-7 object-contain bg-white rounded-md flex-shrink-0">
                 <div class="bg-white border border-slate-200 rounded-2xl rounded-tl-none p-3 shadow-sm max-w-[85%] text-slate-400 italic flex items-center gap-2">
                     <i class="fa-solid fa-circle-notch animate-spin text-[#ea580c]"></i> O engenheiro está a analisar...
                 </div>
@@ -1033,6 +1075,7 @@
             messagesContainer.scrollTop = messagesContainer.scrollHeight;
 
             try {
+                // Ligação síncrona com o endpoint local/Netlify Function
                 const response = await fetch('/.netlify/functions/chat', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -1042,13 +1085,14 @@
                 const data = await response.json();
                 typingBubble.remove();
 
+                // Adicionar resposta estruturada da IA
                 const aiBubble = document.createElement('div');
                 aiBubble.className = "flex items-start gap-2.5";
                 
                 const formattedReply = data.reply.replace(/\n/g, '<br>');
 
                 aiBubble.innerHTML = `
-                    <div class="w-7 h-7 bg-slate-900 text-white rounded-md flex items-center justify-center text-[10px] font-bold flex-shrink-0">UR</div>
+                    <img src="logo.png" alt="Urban Repair Logo" class="w-7 h-7 object-contain bg-white rounded-md flex-shrink-0">
                     <div class="bg-white border border-slate-200 rounded-2xl rounded-tl-none p-3 shadow-sm max-w-[85%] text-slate-700 leading-relaxed">
                         ${formattedReply}
                     </div>
